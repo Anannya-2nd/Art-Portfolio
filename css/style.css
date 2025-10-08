@@ -1,1 +1,499 @@
 
+:root{
+--accent: #b26262;
+--bg-overlay: rgba(0,0,0,0.35);
+--nav-height: 70px;
+}
+*{box-sizing:border-box}
+body,html{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans',sans-serif}
+
+
+/* Navbar */
+.navbar{
+height:var(--nav-height);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 1rem;
+position:absolute; /* Card Container */
+top:0;left:0;right:0;
+z-index:20;
+
+}
+
+.about-me {
+  background-color: #f3f3f3;
+  color: #222;
+  padding: 4rem 1rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text .highlight {
+  color: #ff6b6b;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 180px;
+  }
+}
+
+
+.col {
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Center cards in column */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+}
+
+.navbar .brand{font-weight:700;letter-spacing:0.4px}
+.nav-links{display:flex;gap:1rem;align-items:center}
+.nav-links a{color:#ffbc6e;text-decoration:none;padding:0.5rem 0.75rem;border-radius:6px}
+.nav-links a:hover{background:rgba(255,255,255,0.08)}
+.btn-primary{background:var(--accent);color:white;padding:0.5rem 0.8rem;border-radius:8px;text-decoration:none}
+
+
+/* mobile toggle */
+.nav-toggle{display:none;
+    background:transparent;
+    border:0;
+    color:#ffbc6e;
+    font-size:1.3rem}
+
+.nav-link {
+  position: relative;
+  color: rgb(56, 4, 4);                 /* normal link color */
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';                  /* empty content for the line */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;                    /* hidden by default */
+  height: 2px;                  /* thickness of the line */
+  background-color: #8c9fd4;    /* accent color for the line */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;                  /* show underline on hover */
+}
+
+.nav-link.active::after {
+  width: 100%;                  /* always show underline for active page */
+}
+
+header.hero {
+ 
+  background-image: url('../img/artwork-bg-1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffbc6e;
+  padding: 3rem 1rem;
+  position: relative;
+}
+header.hero-artwork {
+  
+  background-image: url('../img/artwork-bg-1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffbc6e;
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+
+/* Hero / cover area */
+.hero{
+/* big enough for a cover photo */
+height:70vh; /* change to 60vh - 80vh depending on taste */
+min-height:420px; /* ensures it's big on small screens */
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+color:rgb(129, 84, 84);
+overflow:hidden;
+}
+
+
+
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 1rem;max-width:1100px}
+.hero h1{font-size:clamp(28px,6vw,56px);margin:0 0 0.5rem}
+.hero p{margin:0 0 1.2rem;font-size:clamp(14px,2.2vw,20px);opacity:0.95}
+
+
+.hero .cta{display:inline-flex;gap:0.6rem;flex-wrap:wrap;justify-content:center}
+
+
+/* responsive */
+@media (max-width:900px){
+.nav-links{display:none;position:absolute;top:var(--nav-height);right:1rem;background:rgba(0,0,0,0.6);padding:0.6rem;border-radius:8px;flex-direction:column;min-width:160px}
+.nav-links.show{display:flex}
+.nav-toggle{display:block}
+}
+
+
+/* small aesthetic footer under hero for page flow */
+main{background:#a9e1ff;padding:2rem}
+
+.art-section .card {
+  max-width: 350px;   /* keeps card compact */
+  margin: auto;
+}
+
+.art-section .card-img-top {
+  width: 100%;        /* fills card width */
+  height: auto;       /* natural height, no cropping */
+}
+
+.highlight {
+  text-align: center;      /* centers text horizontally */
+  font-size: 2rem;         /* size of heading */
+  color: #ff6b6b;          /* accent color */
+  margin: 2rem 0;          /* spacing above and below */
+  font-weight: bold;        /* makes the text bold */
+}
+
+
+.hero-content.portfolio {
+  padding: 4rem 2rem;             /* some spacing around */
+  max-width: 1100px;              /* keep content centered */
+  margin: 0 auto;
+}
+
+.portfolio-container {
+  display: flex;
+  align-items: center;            /* vertically center image & text */
+  gap: 2.5rem;                    /* space between image and text */
+  flex-wrap: wrap;                /* responsive on small screens */
+}
+
+.portfolio-image img {
+  width: 250px;                   /* adjust size */
+  height: auto;                   /* maintain aspect ratio */
+  border-radius: 15px;            /* optional rounded corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
+.portfolio-text {
+  flex: 1;                        /* take remaining space */
+}
+.artwork-portfolio-text {
+  flex: 1;                        /* take remaining space */
+}
+
+
+.portfolio-text h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 1rem;
+}
+
+.portfolio-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* Responsive: stack image on top on small screens */
+@media (max-width: 768px) {
+  .portfolio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portfolio-image img {
+    width: 180px;                 /* smaller on mobile */
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-text {
+    flex: unset;
+  }
+}
+
+footer {
+  background-color: #520979;
+  color: rgb(103, 173, 243);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+  color: rgb(69, 171, 226);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;   /* removes underline */
+}
+
+
+.social-icon:hover {
+  background-color: #301269;  /* accent color on hover */
+  transform: scale(1.1);
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Card Container */
+.col {
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Center cards in column */
+}
+
+/* Card Styles */
+.card {
+    background-color: #a67ae8; /* white card background */
+    border-radius: 12px; /* rounded corners */
+    box-shadow: 0 8px 20px rgba(36, 1, 1, 0.15); /* subtle shadow */
+    overflow: hidden; /* for rounded corners with image */
+    transition: transform 0.3s, box-shadow 0.3s; /* smooth hover effect */
+    max-width: 300px; /* optional, adjust as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px rgb(255, 1, 153);
+}
+
+/* Card Image */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card Body */
+.card-body {
+    padding: 15px 20px;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2c024b;
+}
+
+/* Category / Subtitle */
+.catagory {
+    font-size: 0.9rem;
+    color: #dcdedf;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Card Text */
+.card-text {
+    font-size: 0.95rem;
+    color: #292828;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+}
+
+.contact-section {
+  padding: 4rem 1rem;
+  background: #f5f5f5;
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.contact-form button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff6b6b;
+  transform: scale(1.05);
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  color: #333;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.contact-info i {
+  margin-right: 0.6rem;
+  color: var(--accent);
+}
+
+.contact-info .social-links {
+  margin-top: 1rem;
+}
+
+.skills-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 2.5rem;
+}
+
+.skill-category h3 {
+  color: #471e7d;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.skill {
+  margin-bottom: 0.8rem;
+}
+
+.skill span {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.progress {
+  background-color: #056579;
+  border-radius: 8px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #8343dc;
+  height: 100%;
+  border-radius: 8px;
+  text-align: right;
+  padding-right: 5px;
+  color: rgb(224, 215, 215);
+  font-size: 0.8rem;
+  line-height: 12px;
+  transition: width 0.5s ease;
+}
+
