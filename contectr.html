@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anannya-Protfolio-Home</title>
+    <title>Anannya-Portfolio-Contact</title>
+
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-eZOKG6q5tYzD6MvZX1kfnZp4zZ5h2V/3FCPgqEwhtZ0Jv6qHENF/l5sZc6Dx9u1juMqzftcD9H9gibG28i/nlA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/contact.css"> <!-- extra contact form CSS -->
 </head>
 
 <body>
-    <header class="hero">
+
+    <header class="hero-artwork">
         <nav class="navbar">
             <div class="brand">Anannya</div>
             <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
             <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="artworks.html" class="nav-link">Artworks</a>
-                <a href="contectr.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link ">Home</a>
+                <a href="artworks.html" class="nav-link ">Artworks</a>
+                <a href="contectr.html" class="nav-link active">Contact</a>
                 <a href="skills.html" class="nav-link">Skills</a>
             </div>
         </nav>
@@ -30,102 +29,61 @@
 
         <div class="hero-content portfolio">
             <div class="portfolio-container">
-                <div class="portfolio-image">
-                    <br>
-                    <br>
-                    <br>
-                    <img src="img/profile/Profile picture.jpg" alt="Your Name">
-                </div>
                 <div class="portfolio-text">
-                    <h1>Hi, I'm Anannya</h1>
+                    <h1>Contact Me</h1>
                     <p>
-                        But I’m best known online as Azuki, the artist behind Azuki Fantasy.
-                        <br>I create digital illustrations inspired by games, emotions, and celestial themes.
+                        Have a project, collaboration, or just want to say hi?
+                        <br>Send me a message and I’ll get back to you!
                     </p>
-                    <a class="btn btn-danger" href="artworks.html">View My Work</a>
                     
                 </div>
-                <br>
             </div>
         </div>
 
 
     </header>
 
+    
 
     <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="highlight">Get In Touch</h2>
+                <div class="contact-container">
+                    <!-- Contact Form -->
+                    <form class="contact-form" action="#" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="6" placeholder="Write your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Send Message</button>
+                    </form>
 
-        <section class="about-me">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="img/profile/pp2.jpg" alt="Anannya Portrait">
-                </div>
-                <div class="about-text">
-                    <h2 class="highlight">About Me</h2>
-                    <p>
-                       Hi, I’m <strong>Anannya</strong>, though most people know me online as <strong>Azuki</strong> — a self-taught digital artist driven by passion and imagination. I specialize in creating character illustrations inspired by games like Mobile Legends: Bang Bang, Genshin Impact, and other fantasy worlds.
-<br>
-                        Art, to me, is more than just drawing — it’s a way to breathe life into imagination and share emotions that words can’t express. Every piece I create reflects my love for storytelling through visuals, where colors, expressions, and atmosphere come together to tell tales beyond the canvas.
-<br>
-                        I’m constantly exploring new techniques and styles to grow as an artist, and I hope my work inspires others just as much as creating it inspires me.
-                    </p>
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Contact Info</h3>
+                        <p><i class="fas fa-envelope"></i> azukifantasyl@example.com</p>
+                        <p><i class="fas fa-phone"></i> +880 XXX XXX XXX</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Chittagong, Bangladesh</p>
+                        
+                    </div>
                 </div>
             </div>
         </section>
-
-
-        <h2 class="highlight">Highlighted Works</h2>
-        <br>
-        
-
-        <!-- Arts works showcase -->
-        <div class="art-section">
-
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card">
-                    <img src="img/art1.jpg" class="card-img-top" alt="Kagura — Beyond the Clouds">
-                    <div class="card-body">
-                        <h5 class="card-title">Kagura — Beyond the Clouds</h5>
-                        <h6 class="catagory">Fanart / Digital Illustration / Character Art</h6>
-                        <p class="card-text">A digital tribute to Kagura’s divine grace and celestial calm. Soft colors, serene flow, and the quiet power of the storm she commands.</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                    <img src="img/art7.jpg" class="card-img-top" alt="Lunox — Zodiac: Pisces">
-                    <div class="card-body">
-                        <h5 class="card-title">Lunox — Zodiac: Pisces</h5>
-                        <h6 class="catagory">Fanart / Digital Illustration / Character Art</h6>
-                        <p class="card-text">A digital fanart capturing Lunox’s balance of light and dark within a starlit dreamscape. Inspired by her cosmic grace and ethereal aura.</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                    <img src="img/art11.jpg" class="card-img-top" alt="Fanny × Sharjil Shahariar — Red Viper Legacy">
-                    <div class="card-body">
-                        <h5 class="card-title">Fanny × Sharjil Shahariar — Red Viper Legacy</h5>
-                        <h6 class="catagory">Fanart / Crossover Illustration / Esports Tribute</h6>
-                        <p class="card-text">An eSports crossover tribute fusing MLBB’s Fanny with the energy and determination of pro player Sharjil Shahariar. A visual celebration of skill, speed, and spirit.</p>
-                    </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-        </div>
     </main>
 
-    <!-- footer section start -->
     <footer>
         <div class="footer">
             <h2>Follow Me</h2>
-            <p>
-            Stay connected with me on social media to keep up with my latest works,  
-            and to support and inspire my creative journey.
-            </p>
+            <p>Stay connected with me on social media to keep up with my latest works and to support and inspire my creative journey.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/azukifantasy/" target="_blank" class="social-icon">
                     <i class="fab fa-instagram"></i>
@@ -136,14 +94,9 @@
                 <a href="https://discord.gg/UzwzQnHDA" target="_blank" class="social-icon">
                     <i class="fab fa-discord"></i>
                 </a>
-                
-
             </div>
-            
         </div>
     </footer>
-
-
 
     <script src="js/script.js"></script>
 </body>
